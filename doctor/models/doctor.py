@@ -23,16 +23,16 @@ class Doctor(models.Model):     # Doctor model
         return f'{self.user.username} Profile'
 
 
-@receiver(signals.post_save, sender=Doctor)
-def new_doctor_account_emails(sender, instance, **kwargs):  # Send welcome email signals
-    if instance:
-        # Doctor welcome email
-        lang = instance.language
-        translation.activate(lang)
-        email_title = _('Thank you for registering with us')
-        email_message = _('Hello, thank you for registering in the reservations system. your account will be activated soon by the admin.')
-        subject = email_title
-        message = email_message
-        email_from = settings.EMAIL_HOST_USER
-        recipient_list = [instance.user.email, ]
-        send_mail(subject, message, email_from, recipient_list)
+# @receiver(signals.post_save, sender=Doctor)
+# def new_doctor_account_emails(sender, instance, **kwargs):  # Send welcome email signals
+#     if instance:
+#         # Doctor welcome email
+#         lang = instance.language
+#         translation.activate(lang)
+#         email_title = _('Thank you for registering with us')
+#         email_message = _('Hello, thank you for registering in the reservations system. your account will be activated soon by the admin.')
+#         subject = email_title
+#         message = email_message
+#         email_from = settings.EMAIL_HOST_USER
+#         recipient_list = [instance.user.email, ]
+#         send_mail(subject, message, email_from, recipient_list)
