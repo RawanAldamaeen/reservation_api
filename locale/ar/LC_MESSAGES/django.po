@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-22 18:19+0000\n"
+"POT-Creation-Date: 2021-05-22 20:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,6 +34,22 @@ msgstr "العربية"
 #: doctor/models/doctor.py:20
 msgid "English"
 msgstr "الإنجليزية"
+
+#: doctor/serializers/DoctorLoginSerializer.py:24
+msgid "Must include \"username\" and \"password\"."
+msgstr "يجب إدخال اسم المستخدم وكلمة المرور"
+
+#: doctor/serializers/DoctorLoginSerializer.py:30
+msgid "Unable to log in with provided credentials."
+msgstr "فشل تسجيل الدخول بالبيانات المدخلة"
+
+#: doctor/serializers/DoctorLoginSerializer.py:34
+msgid "your account is still inactive, admin will activate it soon"
+msgstr "حسابك غير مفعل حاليًا, سيتم تفعيل حسابك من قبل المسؤول قريبًا"
+
+#: doctor/serializers/DoctorLoginSerializer.py:38
+msgid "this page for doctor login only"
+msgstr "هذ الصفحة لتسجيل دخول الأطباء فقط"
 
 #: doctor/serializers/NewDoctorSerializer.py:48
 #: doctor/serializers/NewDoctorSerializer.py:52
