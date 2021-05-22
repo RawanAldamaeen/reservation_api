@@ -4,6 +4,7 @@ from rest_framework import serializers
 from ..models.doctor import Doctor
 from ..models.specialty import Specialty
 from base.models.user import User
+from django.utils.translation import gettext as _
 
 
 class CreateDoctorSerializer(serializers.ModelSerializer):  # Create new doctor request serializer
@@ -44,39 +45,39 @@ class CreateDoctorSerializer(serializers.ModelSerializer):  # Create new doctor 
         # Username validations
         if len(username) < 5 or len(username) > 100:
             raise serializers.ValidationError(
-                {'username': ('username length should be between 5 - 100 characters')}
+                {_('username'): _('username length should be between 5 - 100 characters')}
             )
         if User.objects.filter(username=username).exists():
             raise serializers.ValidationError(
-                {'username': ('username is already in use')}
+                {_('username'): _('username is already in use')}
             )
 
         # Password validation
         if len(password) < 8 or len(password) > 30:
             raise serializers.ValidationError(
-                {'password': ('Password length should be between 8 - 30 characters')}
+                {_('password'): _('Password length should be between 8 - 30 characters')}
             )
 
         # Email validation
         if User.objects.filter(email=email).exists():
             raise serializers.ValidationError(
-                {'email': ('Email is already in use')}
+                {_('email'): _('Email is already in use')}
             )
 
         # Phone validations
         if len(phone) < 10 or len(phone) > 15:
             raise serializers.ValidationError(
-                {'phone': ('Phone length should be between 10 - 15 characters')}
+                {_('phone'): _('Phone length should be between 10 - 15 characters')}
             )
         if Doctor.objects.filter(phone=phone).exists():
             raise serializers.ValidationError(
-                {'phone': ('phone is already in use')}
+                {_('phone'): _('phone is already in use')}
             )
 
         # Name validation
         if len(name) < 5 or len(name) > 100:
             raise serializers.ValidationError(
-                {'name': ('name length should be between 5 - 100 characters')}
+                {_('name'): _('name length should be between 5 - 100 characters')}
             )
 
         return super().validate(attrs)
