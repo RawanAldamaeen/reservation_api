@@ -15,6 +15,6 @@ class DoctorCreate(generics.CreateAPIView):  # create new doctor view
         # invalid data response
         if not serializer.is_valid():
             return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                            data={"status": status.HTTP_422_UNPROCESSABLE_ENTITY, "data": serializer.errors, 'meta': {}})
+                            data={"status": status.HTTP_422_UNPROCESSABLE_ENTITY, "data": {}, 'error': serializer.errors, 'meta': {}})
         serializer.save()
         return Response(status=status.HTTP_201_CREATED, data={"status": status.HTTP_201_CREATED, "data": serializer.data, 'meta': {}})
