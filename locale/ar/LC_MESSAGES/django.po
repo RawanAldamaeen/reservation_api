@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-22 18:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: doctor/models/doctor.py:18
+msgid "Male"
+msgstr "ذكر"
+
+#: doctor/models/doctor.py:18
+msgid "Female"
+msgstr "أنثى"
+
+#: doctor/models/doctor.py:20
+msgid "Arabic"
+msgstr "العربية"
+
+#: doctor/models/doctor.py:20
+msgid "English"
+msgstr "الإنجليزية"
+
+#: doctor/serializers/NewDoctorSerializer.py:48
+#: doctor/serializers/NewDoctorSerializer.py:52
+msgid "username"
+msgstr "اسم المستخدم"
+
+#: doctor/serializers/NewDoctorSerializer.py:48
+msgid "username length should be between 5 - 100 characters"
+msgstr "طول اسم المستخدم يجب أن يكون بين 8_100 حرف"
+
+#: doctor/serializers/NewDoctorSerializer.py:52
+msgid "username is already in use"
+msgstr "اسم المستخدم موجود مسبقًا"
+
+#: doctor/serializers/NewDoctorSerializer.py:58
+msgid "password"
+msgstr "كلمة المرور"
+
+#: doctor/serializers/NewDoctorSerializer.py:58
+msgid "Password length should be between 8 - 30 characters"
+msgstr "طول كلمة المرور يجب أن يكون بين 8_30 حرف"
+
+#: doctor/serializers/NewDoctorSerializer.py:64
+msgid "email"
+msgstr "البريد الالكتروني"
+
+#: doctor/serializers/NewDoctorSerializer.py:64
+msgid "Email is already in use"
+msgstr "هذا البريد الالكتروني موجود مسبقًا"
+
+#: doctor/serializers/NewDoctorSerializer.py:70
+#: doctor/serializers/NewDoctorSerializer.py:74
+msgid "phone"
+msgstr "رقم الجوال"
+
+#: doctor/serializers/NewDoctorSerializer.py:70
+msgid "Phone length should be between 10 - 15 characters"
+msgstr "طول رقم الجوال يجب أن يكون بين 10 - 15 رقم"
+
+#: doctor/serializers/NewDoctorSerializer.py:74
+msgid "phone is already in use"
+msgstr "هذا الرقم موجود مسبقًا"
+
+#: doctor/serializers/NewDoctorSerializer.py:80
+msgid "name"
+msgstr "الاسم"
+
+#: doctor/serializers/NewDoctorSerializer.py:80
+msgid "name length should be between 5 - 100 characters"
+msgstr "طول الاسم يجب أن يكون بين 5 - 100 حرف"
+
+#: doctor/views/DoctorActivationView.py:24
+msgid "your not allowed to perform this action"
+msgstr "غير مسموح لك إجراء هذا العملية"
+
+#~ msgid "Thank you for registering with us"
+#~ msgstr "شكرًا لتسجيلك معنا"
+
+#~ msgid ""
+#~ "Hello, thank you for registering in the reservations system. your account "
+#~ "will be activated soon by the admin."
+#~ msgstr ""
+#~ "مرحبًا, شكرًا لتسجيلك في نظام الحجز. سيتم تفعيل حسابك من قبل المسؤول قريبًا"
