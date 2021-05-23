@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-23 00:11+0000\n"
+"POT-Creation-Date: 2021-05-23 02:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,11 +119,32 @@ msgstr "طول الاسم يجب أن يكون بين 5 - 100 حرف"
 msgid "your not allowed to perform this action"
 msgstr "غير مسموح لك إجراء هذا العملية"
 
-#: patient/views/PatientRegistration.py:39
+#: patient/views/PatientActivationView.py:26
+msgid "Activation Expired"
+msgstr "رابط التنشيط غير صالح"
+
+#: patient/views/PatientActivationView.py:29
+msgid "Invalid token"
+msgstr "رمز تفعيل غير صالح"
+
+#: patient/views/PatientActivationView.py:33
+#: patient/views/PatientActivationView.py:39
+msgid "user"
+msgstr "المستخدم"
+
+#: patient/views/PatientActivationView.py:33
+msgid "User activated already"
+msgstr "تم تفعيل المستخدم بالفعل"
+
+#: patient/views/PatientActivationView.py:39
+msgid "Successfully activated"
+msgstr "تم تنشيط الحساب"
+
+#: patient/views/PatientRegistration.py:45
 msgid "Hi, Use the link below to verify your email \n"
 msgstr "مرحبًا استخدم الرابط المرفق لتفعيل حسابك \n"
 
-#: patient/views/PatientRegistration.py:40
+#: patient/views/PatientRegistration.py:46
 msgid "Activate the account"
 msgstr "تفعيل الحساب"
 

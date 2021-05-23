@@ -39,7 +39,7 @@ class PatientCreate(generics.CreateAPIView):  # create new patient view
 
         token = RefreshToken.for_user(user).access_token
         current_site = get_current_site(request).domain
-        relativeLink = reverse('email-verify')
+        relativeLink = reverse("user-verify")
         absurl = 'http://' + current_site + relativeLink + "?token=" + str(token)
 
         email_body = _('Hi, Use the link below to verify your email \n') + absurl
@@ -54,6 +54,4 @@ class PatientCreate(generics.CreateAPIView):  # create new patient view
                         data={"status": status.HTTP_201_CREATED, "data": serializer.data, 'meta': {}})
 
 
-class VerifyEmail(generics.GenericAPIView):  # Check & active patient account
-    def get(self):
-        pass
+
