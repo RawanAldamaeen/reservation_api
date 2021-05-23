@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'base.apps.BaseConfig',
-    'doctor.apps.DoctorConfig'
+    'doctor.apps.DoctorConfig',
+    'patient.apps.PatientConfig'
 
 ]
 
@@ -136,6 +137,7 @@ REST_FRAMEWORK = {
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
