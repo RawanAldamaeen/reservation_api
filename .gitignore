@@ -17,3 +17,7 @@ media/doctors/dr_pics/*
 !media/doctors/dr_degree_copy/.gitkeep
 
 reservations/.env
+
+media/patients/
+patient/
+shifts/
