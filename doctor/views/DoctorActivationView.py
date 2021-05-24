@@ -1,9 +1,9 @@
 from rest_framework import authentication
 from ..serializers.DoctorActivationserializer import ActivateDoctorSerializer
-from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from django.utils.translation import gettext as _
+from reservations.response import Responses
 from base.models.user import User
 
 
@@ -21,8 +21,8 @@ class DoctorActivation(APIView):  # activate doctor account view
 
         # unauthorized users response
         if not request.user.is_superuser:
-            message = _('your not allowed to perform this action')
-            return Response(status=status.HTTP_403_FORBIDDEN, data={"status": status.HTTP_403_FORBIDDEN, 'message': message, 'meta': {}})
+            return Responses.getErrorResponse(status=status.HTTP_403_FORBIDDEN,
+                                              error=_('your not allowed to perform this action'))
 
         if not active:
             user.is_active = False
@@ -32,4 +32,4 @@ class DoctorActivation(APIView):  # activate doctor account view
         user.save()
 
         serializer = ActivateDoctorSerializer(user)
-        return Response(status=status.HTTP_200_OK, data={"status": status.HTTP_200_OK, "data": serializer.data, 'meta': {}})
+        return Responses.getResponse(status=status.HTTP_200_OK, data=serializer.data)
