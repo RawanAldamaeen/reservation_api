@@ -1,8 +1,8 @@
 from rest_framework import generics
 from ..serializers.NewDoctorSerializer import CreateDoctorSerializer
-from rest_framework.response import Response
 from rest_framework import status
 from ..models.doctor import Doctor
+from reservations.response import Responses
 
 
 class DoctorCreate(generics.CreateAPIView):  # create new doctor view
@@ -14,7 +14,7 @@ class DoctorCreate(generics.CreateAPIView):  # create new doctor view
 
         # invalid data response
         if not serializer.is_valid():
-            return Response(status=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                            data={"status": status.HTTP_422_UNPROCESSABLE_ENTITY, "data": {}, 'error': serializer.errors, 'meta': {}})
+            return Responses.getErrorResponse(status=status.HTTP_422_UNPROCESSABLE_ENTITY, error=serializer.errors)
+
         serializer.save()
-        return Response(status=status.HTTP_201_CREATED, data={"status": status.HTTP_201_CREATED, "data": serializer.data, 'meta': {}})
+        return Responses.getResponse(status=status.HTTP_201_CREATED, data=serializer.data)
