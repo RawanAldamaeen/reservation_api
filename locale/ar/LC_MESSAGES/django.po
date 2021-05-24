@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-23 02:51+0000\n"
+"POT-Creation-Date: 2021-05-24 08:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,10 +36,12 @@ msgid "English"
 msgstr "الإنجليزية"
 
 #: doctor/serializers/DoctorLoginSerializer.py:23
+#: patient/serializers/PatientLoginSerializer.py:23
 msgid "Must include \"username\" and \"password\"."
 msgstr "يجب إدخال اسم المستخدم وكلمة المرور"
 
 #: doctor/serializers/DoctorLoginSerializer.py:29
+#: patient/serializers/PatientLoginSerializer.py:29
 msgid "Unable to log in with provided credentials."
 msgstr "فشل تسجيل الدخول بالبيانات المدخلة"
 
@@ -49,7 +51,7 @@ msgstr "حسابك غير مفعل حاليًا, سيتم تفعيل حسابك 
 
 #: doctor/serializers/DoctorLoginSerializer.py:37
 msgid "this page for doctor login only"
-msgstr "هذ الصفحة لتسجيل دخول الأطباء فقط"
+msgstr "هذه الصفحة لتسجيل دخول الأطباء فقط"
 
 #: doctor/serializers/NewDoctorSerializer.py:48
 #: doctor/serializers/NewDoctorSerializer.py:52
@@ -115,30 +117,39 @@ msgstr "الاسم"
 msgid "name length should be between 5 - 100 characters"
 msgstr "طول الاسم يجب أن يكون بين 5 - 100 حرف"
 
-#: doctor/views/DoctorActivationView.py:24
+#: doctor/views/DoctorActivationView.py:24 shifts/views/CreateShiftView.py:18
 msgid "your not allowed to perform this action"
 msgstr "غير مسموح لك إجراء هذا العملية"
 
-#: patient/views/PatientActivationView.py:26
-msgid "Activation Expired"
-msgstr "رابط التنشيط غير صالح"
+#: patient/serializers/PatientLoginSerializer.py:33
+msgid ""
+"your account is still inactive, check your email box for activation email"
+msgstr "حسابك غير مفعل حاليًا, تحقق من صندوق البريد الالكتروني عن رسالة التفعيل"
 
-#: patient/views/PatientActivationView.py:29
-msgid "Invalid token"
-msgstr "رمز تفعيل غير صالح"
+#: patient/serializers/PatientLoginSerializer.py:37
+msgid "this page for patient login only"
+msgstr "هذه الصفحة لتسجيل دخول المراجعين فقط"
 
-#: patient/views/PatientActivationView.py:33
-#: patient/views/PatientActivationView.py:39
+#: patient/views/PatientActivationView.py:20
+#: patient/views/PatientActivationView.py:25
 msgid "user"
 msgstr "المستخدم"
 
-#: patient/views/PatientActivationView.py:33
+#: patient/views/PatientActivationView.py:20
 msgid "User activated already"
 msgstr "تم تفعيل المستخدم بالفعل"
 
-#: patient/views/PatientActivationView.py:39
+#: patient/views/PatientActivationView.py:25
 msgid "Successfully activated"
 msgstr "تم تنشيط الحساب"
+
+#: patient/views/PatientActivationView.py:29
+msgid "Activation Expired"
+msgstr "رابط التنشيط غير صالح"
+
+#: patient/views/PatientActivationView.py:32
+msgid "Invalid token"
+msgstr "رمز تفعيل غير صالح"
 
 #: patient/views/PatientRegistration.py:45
 msgid "Hi, Use the link below to verify your email \n"
@@ -147,6 +158,42 @@ msgstr "مرحبًا استخدم الرابط المرفق لتفعيل حسا�
 #: patient/views/PatientRegistration.py:46
 msgid "Activate the account"
 msgstr "تفعيل الحساب"
+
+#: shifts/models/shifts.py:14
+msgid "Sunday"
+msgstr "الأحد"
+
+#: shifts/models/shifts.py:15
+msgid "Monday"
+msgstr "الإثنين"
+
+#: shifts/models/shifts.py:16
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#: shifts/models/shifts.py:17
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+#: shifts/models/shifts.py:18
+msgid "Thursday"
+msgstr "الخميس"
+
+#: shifts/models/shifts.py:19
+msgid "Friday"
+msgstr "الجمعة"
+
+#: shifts/models/shifts.py:20
+msgid "Saturday"
+msgstr "السبت"
+
+#: shifts/serializers/CreateShiftSerializer.py:43
+msgid "start time"
+msgstr "وقت البدء"
+
+#: shifts/serializers/CreateShiftSerializer.py:43
+msgid "shift start time should be before shift end time"
+msgstr "وقت بدء المناوبة يجب أن يكون قبل وقت إنتهاء المناوبة"
 
 #~ msgid "Thank you for registering with us"
 #~ msgstr "شكرًا لتسجيلك معنا"

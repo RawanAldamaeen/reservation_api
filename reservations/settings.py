@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'base.apps.BaseConfig',
     'doctor.apps.DoctorConfig',
-    'patient.apps.PatientConfig'
+    'patient.apps.PatientConfig',
+    'shifts.apps.ShiftsConfig',
 
 ]
 
