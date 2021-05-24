@@ -1,10 +1,10 @@
 import jwt
 from rest_framework import generics
-from rest_framework.response import Response
 from rest_framework import status
 from django.conf import settings
 from django.utils.translation import gettext as _
 from base.models.user import User
+from reservations.response import Responses
 
 
 class VerifyUser(generics.GenericAPIView):  # Check & active patient account
@@ -16,18 +16,16 @@ class VerifyUser(generics.GenericAPIView):  # Check & active patient account
             user = User.objects.get(id=payload['user_id'])
 
             if user.is_active:
-                return Response(status=status.HTTP_200_OK, data={"status": status.HTTP_200_OK,
-                                                                 'data': {_('user'): _('User activated already')},
-                                                                 'meta': {}})
+                return Responses.getResponse(status=status.HTTP_200_OK, data={_('user'): _('User activated already')})
+
             user.is_active = True
             user.save()
-            return Response(status=status.HTTP_200_OK, data={"status": status.HTTP_200_OK,
-                                                         'data': {_('user'): _('Successfully activated')}, 'meta': {}})
+            return Responses.getResponse(status=status.HTTP_200_OK, data={_('user'): _('Successfully activated')})
 
         except jwt.ExpiredSignatureError as identifier:
-            return Response(status=status.HTTP_404_NOT_FOUND, data={"status": status.HTTP_404_NOT_FOUND, 'data': {},
-                                                                    'error': _('Activation Expired'), 'meta': {}})
+            return Responses.getErrorResponse(status=status.HTTP_404_NOT_FOUND, error=_('Activation Expired'))
+
         except jwt.exceptions.DecodeError as identifier:
-            return Response(status=status.HTTP_404_NOT_FOUND, data={"status": status.HTTP_404_NOT_FOUND, 'data': {},
-                                                                    'error': _('Invalid token'), 'meta': {}})
+            return Responses.getErrorResponse(status=status.HTTP_404_NOT_FOUND, error=_('Invalid token'))
+
 
