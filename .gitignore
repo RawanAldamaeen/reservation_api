@@ -26,7 +26,11 @@ shifts/serializers/__pycache__/*
 reservation/migrations/__pycache__/*
 reservation/models/__pycache__/*
 reservation/views/__pycache__/*
+reservation/views/patient_view/__pycache__/*
+reservation/views/doctor_view/__pycache__/*
 reservation/serializers/__pycache__/*
+reservation/serializers/patient_serializer/__pycache__/*
+reservation/serializers/doctor_serializer/__pycache__/*
 
 media/doctors/dr_degree_copy/*
 media/doctors/dr_pics/*

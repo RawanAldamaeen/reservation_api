@@ -1,7 +1,7 @@
 from rest_framework import generics
-from ..serializers.NewReservationSerializer import NewReservationView
+from reservation.serializers.patient_serializer.NewReservationSerializer import NewReservationView
 from rest_framework import status
-from ..models.reservation import Reservation
+from reservation.models.reservation import Reservation
 from django.utils.translation import gettext as _
 from reservations.response import Responses
 

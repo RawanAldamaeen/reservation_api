@@ -2,7 +2,7 @@ from datetime import datetime
 
 from annoying.functions import get_object_or_None
 from rest_framework import serializers
-from ..models.reservation import Reservation
+from reservation.models.reservation import Reservation
 from shifts.models.shifts import Shift
 from django.utils.translation import gettext as _
 
