@@ -9,7 +9,6 @@ class Patient(models.Model):     # Patient model
     phone = models.CharField(unique=True, max_length=15)
     photo = models.ImageField(upload_to='patients/patients_pics', blank=True, default=None)
     gender = models.CharField(choices=[('Male', _('Male')), ('Female', _('Female'))], default=None, max_length=32)
-    language = models.CharField(choices=[('ar', _('Arabic')), ('en', _('English'))], default='en', max_length=32)
 
     def __str__(self):
         return f'{self.user.username} Profile'

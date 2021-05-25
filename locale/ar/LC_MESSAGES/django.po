@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-24 08:35+0000\n"
+"POT-Creation-Date: 2021-05-25 01:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,14 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
+#: base/models/user.py:9
+msgid "Arabic"
+msgstr "العربية"
+
+#: base/models/user.py:9
+msgid "English"
+msgstr "الإنجليزية"
+
 #: doctor/models/doctor.py:18 patient/models/patient.py:11
 msgid "Male"
 msgstr "ذكر"
@@ -26,14 +34,6 @@ msgstr "ذكر"
 #: doctor/models/doctor.py:18 patient/models/patient.py:11
 msgid "Female"
 msgstr "أنثى"
-
-#: doctor/models/doctor.py:20 patient/models/patient.py:12
-msgid "Arabic"
-msgstr "العربية"
-
-#: doctor/models/doctor.py:20 patient/models/patient.py:12
-msgid "English"
-msgstr "الإنجليزية"
 
 #: doctor/serializers/DoctorLoginSerializer.py:23
 #: patient/serializers/PatientLoginSerializer.py:23
@@ -117,7 +117,9 @@ msgstr "الاسم"
 msgid "name length should be between 5 - 100 characters"
 msgstr "طول الاسم يجب أن يكون بين 5 - 100 حرف"
 
-#: doctor/views/DoctorActivationView.py:24 shifts/views/CreateShiftView.py:18
+#: doctor/views/DoctorActivationView.py:25
+#: reservation/views/NewReservationView.py:17
+#: shifts/views/CreateShiftView.py:18
 msgid "your not allowed to perform this action"
 msgstr "غير مسموح لك إجراء هذا العملية"
 
@@ -130,34 +132,70 @@ msgstr "حسابك غير مفعل حاليًا, تحقق من صندوق الب
 msgid "this page for patient login only"
 msgstr "هذه الصفحة لتسجيل دخول المراجعين فقط"
 
-#: patient/views/PatientActivationView.py:20
-#: patient/views/PatientActivationView.py:25
+#: patient/views/PatientActivationView.py:19
+#: patient/views/PatientActivationView.py:23
 msgid "user"
 msgstr "المستخدم"
 
-#: patient/views/PatientActivationView.py:20
+#: patient/views/PatientActivationView.py:19
 msgid "User activated already"
 msgstr "تم تفعيل المستخدم بالفعل"
 
-#: patient/views/PatientActivationView.py:25
+#: patient/views/PatientActivationView.py:23
 msgid "Successfully activated"
 msgstr "تم تنشيط الحساب"
 
-#: patient/views/PatientActivationView.py:29
+#: patient/views/PatientActivationView.py:26
 msgid "Activation Expired"
 msgstr "رابط التنشيط غير صالح"
 
-#: patient/views/PatientActivationView.py:32
+#: patient/views/PatientActivationView.py:29
 msgid "Invalid token"
 msgstr "رمز تفعيل غير صالح"
 
-#: patient/views/PatientRegistration.py:45
+#: patient/views/PatientRegistration.py:44
 msgid "Hi, Use the link below to verify your email \n"
 msgstr "مرحبًا استخدم الرابط المرفق لتفعيل حسابك \n"
 
-#: patient/views/PatientRegistration.py:46
+#: patient/views/PatientRegistration.py:45
 msgid "Activate the account"
 msgstr "تفعيل الحساب"
+
+#: reservation/models/reservation.py:14
+msgid "new"
+msgstr "جديد"
+
+#: reservation/models/reservation.py:15
+msgid "confirm"
+msgstr "مؤكد"
+
+#: reservation/models/reservation.py:16
+msgid "canceled"
+msgstr "ملغي"
+
+#: reservation/models/reservation.py:17
+msgid "closed"
+msgstr "مقفل"
+
+#: reservation/serializers/NewReservationSerializer.py:30
+msgid "Doctor is unavailable on this day, please choose another day"
+msgstr "الطبيب غير متاح في هذا اليوم, يرجى اختيار يوم اخر"
+
+#: reservation/serializers/NewReservationSerializer.py:41
+msgid ""
+"Doctor is unavailable on this time, please choose time between {start."
+"time()} and {end.time()}"
+msgstr ""
+"الطبيب غير متاح في هذا الوقت, يرجي اختيار وقت اخر بين {start.time()} و {end."
+"time()}"
+
+#: reservation/serializers/NewReservationSerializer.py:49
+msgid ""
+"Doctor is unavailable on this time, please choose another hour between "
+"{start.time()} and {end.time()}"
+msgstr ""
+"الطبيب غير متاح في هذه الساعة, يرجي اختيار ساعة اخرى بين"
+"{start.time()} و {end.time()}"
 
 #: shifts/models/shifts.py:14
 msgid "Sunday"

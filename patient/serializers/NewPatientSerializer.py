@@ -84,6 +84,7 @@ class CreatePatientSerializer(serializers.ModelSerializer):  # Create new patien
         user.username = data['username']
         user.email = data['email']
         user.set_password(data['password'])
+        user.language = data['language']
         user.is_active = False
         user.is_patient = True
         user.save()
@@ -91,7 +92,6 @@ class CreatePatientSerializer(serializers.ModelSerializer):  # Create new patien
         patient.user = user
         patient.name = data['name']
         patient.phone = data['phone']
-        patient.language = data['language']
         patient.gender = data['gender']
         patient.photo = data['photo']
         patient.save()

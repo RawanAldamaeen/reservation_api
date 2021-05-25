@@ -17,7 +17,6 @@ class Doctor(models.Model):     # Doctor model
     degree_copy = models.ImageField(upload_to='doctors/dr_degree_copy', default=None)
     gender = models.CharField(choices=[('Male', _('Male')), ('Female', _('Female'))], default=None, max_length=32)
     specialty_id = models.ForeignKey(Specialty, on_delete=models.CASCADE, null=True)
-    language = models.CharField(choices=[('ar', _('Arabic')), ('en', _('English'))], default='en', max_length=32)
 
     def __str__(self):
         return f'{self.user.username} Profile'

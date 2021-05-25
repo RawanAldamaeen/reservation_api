@@ -3,6 +3,7 @@ base/__pycache__/*
 doctor/__pycache__/*
 patient/__pycache__/*
 shifts/__pycache__/*
+reservation/__pycache__/*
 
 base/migrations/__pycache__/*
 base/models/__pycache__/*
@@ -21,6 +22,11 @@ shifts/models/__pycache__/*
 shifts/migrations/__pycache__/*
 shifts/views/__pycache__/*
 shifts/serializers/__pycache__/*
+
+reservation/migrations/__pycache__/*
+reservation/models/__pycache__/*
+reservation/views/__pycache__/*
+reservation/serializers/__pycache__/*
 
 media/doctors/dr_degree_copy/*
 media/doctors/dr_pics/*

@@ -11,7 +11,6 @@ class DoctorCreate(generics.CreateAPIView):  # create new doctor view
 
     def post(self, request, *args, **kwargs):   # perform post request
         serializer = CreateDoctorSerializer(data=request.data)
-
         # invalid data response
         if not serializer.is_valid():
             return Responses.getErrorResponse(status=status.HTTP_422_UNPROCESSABLE_ENTITY, error=serializer.errors)

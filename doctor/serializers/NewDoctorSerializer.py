@@ -26,7 +26,7 @@ class CreateDoctorSerializer(serializers.ModelSerializer):  # Create new doctor 
     photo = serializers.ImageField(required=False, write_only=True, default=None)
     degree_copy = serializers.ImageField()
     specialty = serializers.ChoiceField(choices=Specialty.objects.all(), write_only=True)
-    language = serializers.ChoiceField(required=False, choices=language_choice, default='en')
+    language = serializers.ChoiceField(required=False, choices=language_choice, default='en', write_only=True)
     gender = serializers.ChoiceField(required=False, choices=gender_choice, default='none')
 
     class Meta:
@@ -90,6 +90,7 @@ class CreateDoctorSerializer(serializers.ModelSerializer):  # Create new doctor 
         user.username = data['username']
         user.email = data['email']
         user.set_password(data['password'])
+        user.language = data['language']
         user.is_active = False
         user.is_doctor = True
         user.save()
@@ -98,7 +99,6 @@ class CreateDoctorSerializer(serializers.ModelSerializer):  # Create new doctor 
         doctor.specialty_id = Specialty.objects.get(id=specialty.id)
         doctor.name = data['name']
         doctor.phone = data['phone']
-        doctor.language = data['language']
         doctor.gender = data['gender']
         doctor.photo = data['photo']
         doctor.degree_copy = data['degree_copy']
