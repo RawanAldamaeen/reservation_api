@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-26 02:27+0000\n"
+"POT-Creation-Date: 2021-05-26 04:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,7 +118,8 @@ msgid "name length should be between 5 - 100 characters"
 msgstr "طول الاسم يجب أن يكون بين 5 - 100 حرف"
 
 #: doctor/views/DoctorActivationView.py:25
-#: reservation/views/doctor_view/ConfirmReservationView.py:36
+#: reservation/views/doctor_view/ConfirmReservationView.py:41
+#: reservation/views/doctor_view/RejectReservationView.py:42
 #: reservation/views/doctor_view/ReservationListView.py:38
 #: reservation/views/patient_view/DoctorListView.py:40
 #: reservation/views/patient_view/NewReservationView.py:18
@@ -200,14 +201,29 @@ msgstr ""
 "الطبيب غير متاح في هذه الساعة, يرجي اختيار ساعة اخرى بين{start.time()} و "
 "{end.time()}"
 
-#: reservation/views/doctor_view/ConfirmReservationView.py:12
+#: reservation/views/doctor_view/ConfirmReservationView.py:18
 msgid "Reservation Confirmed"
 msgstr "تم تأكيد الحجز"
 
-#: reservation/views/doctor_view/ConfirmReservationView.py:14
+#: reservation/views/doctor_view/ConfirmReservationView.py:20
 msgid ""
 "Hello, your reservation confirmed, be sure to be on the hospital on time"
 msgstr "تم تأكيد حجزك, تأكد من حضورك للمستشفى في الموعد"
+
+#: reservation/views/doctor_view/RejectReservationView.py:18
+msgid "Reservation rejected"
+msgstr "تم الغاء الحجز"
+
+#: reservation/views/doctor_view/RejectReservationView.py:20
+#, python-brace-format
+msgid ""
+"Hello, your reservation is rejected, for the reason: {reason}, please choose "
+"another time"
+msgstr "تم الغاء حجزك, بسبب {reason}, نرجو اختيار موعد اخر"
+
+#: reservation/views/doctor_view/RejectReservationView.py:45
+msgid "rejection reason field is required"
+msgstr "حقل سبب الإلغاء مطلوب"
 
 #: shifts/models/shifts.py:14
 msgid "Sunday"
