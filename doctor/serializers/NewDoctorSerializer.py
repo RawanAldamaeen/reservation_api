@@ -90,7 +90,6 @@ class CreateDoctorSerializer(serializers.ModelSerializer):  # Create new doctor 
         user.username = data['username']
         user.email = data['email']
         user.set_password(data['password'])
-        user.language = data['language']
         user.is_active = False
         user.is_doctor = True
         user.save()
@@ -100,6 +99,7 @@ class CreateDoctorSerializer(serializers.ModelSerializer):  # Create new doctor 
         doctor.name = data['name']
         doctor.phone = data['phone']
         doctor.gender = data['gender']
+        doctor.language = data['language']
         doctor.photo = data['photo']
         doctor.degree_copy = data['degree_copy']
         doctor.save()
