@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-25 01:41+0000\n"
+"POT-Creation-Date: 2021-05-26 02:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,7 +118,10 @@ msgid "name length should be between 5 - 100 characters"
 msgstr "طول الاسم يجب أن يكون بين 5 - 100 حرف"
 
 #: doctor/views/DoctorActivationView.py:25
-#: reservation/views/NewReservationView.py:17
+#: reservation/views/doctor_view/ConfirmReservationView.py:36
+#: reservation/views/doctor_view/ReservationListView.py:38
+#: reservation/views/patient_view/DoctorListView.py:40
+#: reservation/views/patient_view/NewReservationView.py:18
 #: shifts/views/CreateShiftView.py:18
 msgid "your not allowed to perform this action"
 msgstr "غير مسموح لك إجراء هذا العملية"
@@ -177,11 +180,11 @@ msgstr "ملغي"
 msgid "closed"
 msgstr "مقفل"
 
-#: reservation/serializers/NewReservationSerializer.py:30
+#: reservation/serializers/patient_serializer/NewReservationSerializer.py:28
 msgid "Doctor is unavailable on this day, please choose another day"
 msgstr "الطبيب غير متاح في هذا اليوم, يرجى اختيار يوم اخر"
 
-#: reservation/serializers/NewReservationSerializer.py:41
+#: reservation/serializers/patient_serializer/NewReservationSerializer.py:38
 msgid ""
 "Doctor is unavailable on this time, please choose time between {start."
 "time()} and {end.time()}"
@@ -189,13 +192,22 @@ msgstr ""
 "الطبيب غير متاح في هذا الوقت, يرجي اختيار وقت اخر بين {start.time()} و {end."
 "time()}"
 
-#: reservation/serializers/NewReservationSerializer.py:49
+#: reservation/serializers/patient_serializer/NewReservationSerializer.py:46
 msgid ""
 "Doctor is unavailable on this time, please choose another hour between "
 "{start.time()} and {end.time()}"
 msgstr ""
-"الطبيب غير متاح في هذه الساعة, يرجي اختيار ساعة اخرى بين"
-"{start.time()} و {end.time()}"
+"الطبيب غير متاح في هذه الساعة, يرجي اختيار ساعة اخرى بين{start.time()} و "
+"{end.time()}"
+
+#: reservation/views/doctor_view/ConfirmReservationView.py:12
+msgid "Reservation Confirmed"
+msgstr "تم تأكيد الحجز"
+
+#: reservation/views/doctor_view/ConfirmReservationView.py:14
+msgid ""
+"Hello, your reservation confirmed, be sure to be on the hospital on time"
+msgstr "تم تأكيد حجزك, تأكد من حضورك للمستشفى في الموعد"
 
 #: shifts/models/shifts.py:14
 msgid "Sunday"
