@@ -28,6 +28,12 @@ reservation/models/__pycache__/*
 reservation/views/__pycache__/*
 reservation/serializers/__pycache__/*
 
+reservation/serializers/doctor_serializer/
+reservation/serializers/patient_serializer/
+reservation/views/doctor_view/
+reservation/views/patient_view/
+
+
 media/doctors/dr_degree_copy/*
 media/doctors/dr_pics/*
 media/patients/patients_pics/*
