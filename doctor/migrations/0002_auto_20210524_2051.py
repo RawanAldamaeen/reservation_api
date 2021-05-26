@@ -20,8 +20,9 @@ class Migration(migrations.Migration):
                 ('phone', models.CharField(max_length=15, unique=True)),
                 ('photo', models.ImageField(blank=True, default=None, upload_to='doctors/dr_pics')),
                 ('degree_copy', models.ImageField(default=None, upload_to='doctors/dr_degree_copy')),
-                ('gender',
-                 models.CharField(choices=[('Male', 'Male'), ('Female', 'Female')], default=None, max_length=32)),
+                ('gender', models.CharField(choices=[('Male', 'Male'), ('Female', 'Female')], default=None, max_length=32)),
+                ('language',
+                 models.CharField(choices=[('ar', 'Arabic'), ('en', 'English')], default='en', max_length=32)),
                 ('specialty_id',
                  models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='doctor.specialty')),
                 (
