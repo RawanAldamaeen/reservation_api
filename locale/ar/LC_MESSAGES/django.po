@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-24 08:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: doctor/models/doctor.py:18 patient/models/patient.py:11
+msgid "Male"
+msgstr "ذكر"
+
+#: doctor/models/doctor.py:18 patient/models/patient.py:11
+msgid "Female"
+msgstr "أنثى"
+
+#: doctor/models/doctor.py:20 patient/models/patient.py:12
+msgid "Arabic"
+msgstr "العربية"
+
+#: doctor/models/doctor.py:20 patient/models/patient.py:12
+msgid "English"
+msgstr "الإنجليزية"
+
+#: doctor/serializers/DoctorLoginSerializer.py:23
+#: patient/serializers/PatientLoginSerializer.py:23
+msgid "Must include \"username\" and \"password\"."
+msgstr "يجب إدخال اسم المستخدم وكلمة المرور"
+
+#: doctor/serializers/DoctorLoginSerializer.py:29
+#: patient/serializers/PatientLoginSerializer.py:29
+msgid "Unable to log in with provided credentials."
+msgstr "فشل تسجيل الدخول بالبيانات المدخلة"
+
+#: doctor/serializers/DoctorLoginSerializer.py:33
+msgid "your account is still inactive, admin will activate it soon"
+msgstr "حسابك غير مفعل حاليًا, سيتم تفعيل حسابك من قبل المسؤول قريبًا"
+
+#: doctor/serializers/DoctorLoginSerializer.py:37
+msgid "this page for doctor login only"
+msgstr "هذه الصفحة لتسجيل دخول الأطباء فقط"
+
+#: doctor/serializers/NewDoctorSerializer.py:48
+#: doctor/serializers/NewDoctorSerializer.py:52
+#: patient/serializers/NewPatientSerializer.py:44
+#: patient/serializers/NewPatientSerializer.py:48
+msgid "username"
+msgstr "اسم المستخدم"
+
+#: doctor/serializers/NewDoctorSerializer.py:48
+#: patient/serializers/NewPatientSerializer.py:44
+msgid "username length should be between 5 - 100 characters"
+msgstr "طول اسم المستخدم يجب أن يكون بين 8_100 حرف"
+
+#: doctor/serializers/NewDoctorSerializer.py:52
+#: patient/serializers/NewPatientSerializer.py:48
+msgid "username is already in use"
+msgstr "اسم المستخدم موجود مسبقًا"
+
+#: doctor/serializers/NewDoctorSerializer.py:58
+#: patient/serializers/NewPatientSerializer.py:54
+msgid "password"
+msgstr "كلمة المرور"
+
+#: doctor/serializers/NewDoctorSerializer.py:58
+#: patient/serializers/NewPatientSerializer.py:54
+msgid "Password length should be between 8 - 30 characters"
+msgstr "طول كلمة المرور يجب أن يكون بين 8_30 حرف"
+
+#: doctor/serializers/NewDoctorSerializer.py:64
+#: patient/serializers/NewPatientSerializer.py:60
+msgid "email"
+msgstr "البريد الالكتروني"
+
+#: doctor/serializers/NewDoctorSerializer.py:64
+#: patient/serializers/NewPatientSerializer.py:60
+msgid "Email is already in use"
+msgstr "هذا البريد الالكتروني موجود مسبقًا"
+
+#: doctor/serializers/NewDoctorSerializer.py:70
+#: doctor/serializers/NewDoctorSerializer.py:74
+#: patient/serializers/NewPatientSerializer.py:66
+#: patient/serializers/NewPatientSerializer.py:70
+msgid "phone"
+msgstr "رقم الجوال"
+
+#: doctor/serializers/NewDoctorSerializer.py:70
+#: patient/serializers/NewPatientSerializer.py:66
+msgid "Phone length should be between 10 - 15 characters"
+msgstr "طول رقم الجوال يجب أن يكون بين 10 - 15 رقم"
+
+#: doctor/serializers/NewDoctorSerializer.py:74
+#: patient/serializers/NewPatientSerializer.py:70
+msgid "phone is already in use"
+msgstr "هذا الرقم موجود مسبقًا"
+
+#: doctor/serializers/NewDoctorSerializer.py:80
+#: patient/serializers/NewPatientSerializer.py:76
+msgid "name"
+msgstr "الاسم"
+
+#: doctor/serializers/NewDoctorSerializer.py:80
+#: patient/serializers/NewPatientSerializer.py:76
+msgid "name length should be between 5 - 100 characters"
+msgstr "طول الاسم يجب أن يكون بين 5 - 100 حرف"
+
+#: doctor/views/DoctorActivationView.py:24 shifts/views/CreateShiftView.py:18
+msgid "your not allowed to perform this action"
+msgstr "غير مسموح لك إجراء هذا العملية"
+
+#: patient/serializers/PatientLoginSerializer.py:33
+msgid ""
+"your account is still inactive, check your email box for activation email"
+msgstr "حسابك غير مفعل حاليًا, تحقق من صندوق البريد الالكتروني عن رسالة التفعيل"
+
+#: patient/serializers/PatientLoginSerializer.py:37
+msgid "this page for patient login only"
+msgstr "هذه الصفحة لتسجيل دخول المراجعين فقط"
+
+#: patient/views/PatientActivationView.py:20
+#: patient/views/PatientActivationView.py:25
+msgid "user"
+msgstr "المستخدم"
+
+#: patient/views/PatientActivationView.py:20
+msgid "User activated already"
+msgstr "تم تفعيل المستخدم بالفعل"
+
+#: patient/views/PatientActivationView.py:25
+msgid "Successfully activated"
+msgstr "تم تنشيط الحساب"
+
+#: patient/views/PatientActivationView.py:29
+msgid "Activation Expired"
+msgstr "رابط التنشيط غير صالح"
+
+#: patient/views/PatientActivationView.py:32
+msgid "Invalid token"
+msgstr "رمز تفعيل غير صالح"
+
+#: patient/views/PatientRegistration.py:45
+msgid "Hi, Use the link below to verify your email \n"
+msgstr "مرحبًا استخدم الرابط المرفق لتفعيل حسابك \n"
+
+#: patient/views/PatientRegistration.py:46
+msgid "Activate the account"
+msgstr "تفعيل الحساب"
+
+#: shifts/models/shifts.py:14
+msgid "Sunday"
+msgstr "الأحد"
+
+#: shifts/models/shifts.py:15
+msgid "Monday"
+msgstr "الإثنين"
+
+#: shifts/models/shifts.py:16
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#: shifts/models/shifts.py:17
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+#: shifts/models/shifts.py:18
+msgid "Thursday"
+msgstr "الخميس"
+
+#: shifts/models/shifts.py:19
+msgid "Friday"
+msgstr "الجمعة"
+
+#: shifts/models/shifts.py:20
+msgid "Saturday"
+msgstr "السبت"
+
+#: shifts/serializers/CreateShiftSerializer.py:43
+msgid "start time"
+msgstr "وقت البدء"
+
+#: shifts/serializers/CreateShiftSerializer.py:43
+msgid "shift start time should be before shift end time"
+msgstr "وقت بدء المناوبة يجب أن يكون قبل وقت إنتهاء المناوبة"
+
+#~ msgid "Thank you for registering with us"
+#~ msgstr "شكرًا لتسجيلك معنا"
+
+#~ msgid ""
+#~ "Hello, thank you for registering in the reservations system. your account "
+#~ "will be activated soon by the admin."
+#~ msgstr ""
+#~ "مرحبًا, شكرًا لتسجيلك في نظام الحجز. سيتم تفعيل حسابك من قبل المسؤول قريبًا"
