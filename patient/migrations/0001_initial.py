@@ -21,8 +21,13 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=100, unique=True)),
                 ('phone', models.CharField(max_length=15, unique=True)),
                 ('photo', models.ImageField(blank=True, default=None, upload_to='patients/patients_pics')),
-                ('gender', models.CharField(choices=[('Male', 'Male'), ('Female', 'Female')], default=None, max_length=32)),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('gender',
+                 models.CharField(choices=[('Male', 'Male'), ('Female', 'Female')], default=None, max_length=32)),
+                ('language',
+                 models.CharField(choices=[('ar', 'Arabic'), ('en', 'English')], default='en', max_length=32)),
+                (
+                    'user',
+                    models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]

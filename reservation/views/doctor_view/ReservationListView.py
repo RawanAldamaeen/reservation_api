@@ -14,16 +14,11 @@ class ReservationsListPagination(pagination.PageNumberPagination):  # Reservatio
         search = self.request.query_params.get('search')
         if search is None:
             search = ''
-        status_choices = ('confirm', 'canceled','closed')
         meta = {
             'count': self.page.paginator.count,
             'next': self.get_next_link(),
             'previous': self.get_previous_link(),
             'search': search,
-        }
-        data = {
-            'data':data,
-            'action': status_choices
         }
 
         return Responses.getResponse(status=status.HTTP_200_OK, data=data, meta=meta)
